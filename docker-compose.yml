@@ -1,0 +1,12 @@
+version: '3'
+services:
+  db:
+    image: 'postgres:latest'  
+    environment:
+      POSTGRESS_PASSWORD: postgres
+      POSTGRESS_USER: postgres
+      POSTGRESS_DB: crud
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
+    ports:
+      - '5432:5432'
